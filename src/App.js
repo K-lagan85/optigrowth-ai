@@ -1,23 +1,35 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-br from-white to-gray-100 p-8">
-      <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4">
-        OptiGrowth Global
-      </h1>
-      <p className="text-lg md:text-xl text-center text-gray-600 max-w-2xl mb-6">
-        Libérez votre potentiel avec l'IA. Des stratégies sur mesure, une croissance intelligente, une domination mondiale.
-      </p>
-      <div className="flex gap-4">
-        <Button className="text-white bg-black hover:bg-gray-800 px-6 py-3 text-lg">
-          Commencer gratuitement
-        </Button>
-        <Button variant="outline" className="px-6 py-3 text-lg">
-          Voir les formules
-        </Button>
-      </div>
-    </main>
+    <div className="min-h-screen bg-white text-black">
+      {/* Header */}
+      <header className="flex justify-between items-center p-6 shadow-md">
+        <h1 className="text-2xl font-bold text-blue-700">OptiGrowth Global</h1>
+        <nav className="space-x-4">
+          <a href="#features" className="hover:text-blue-500">Fonctionnalités</a>
+          <a href="#contact" className="hover:text-blue-500">Contact</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="text-center py-20 bg-gray-50">
+        <h2 className="text-4xl font-extrabold mb-4 text-gray-900">Optimisez votre croissance</h2>
+        <p className="text-lg mb-6 max-w-xl mx-auto text-gray-700">
+          Automatisez, innovez et gagnez en performance avec notre IA intelligente.
+        </p>
+        <a
+          href="#contact"
+          className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+        >
+          Démarrer maintenant
+        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center text-gray-500 text-sm py-4">
+        © {new Date().getFullYear()} OptiGrowth Global. Tous droits réservés.
+      </footer>
+    </div>
   );
 }
